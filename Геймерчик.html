@@ -1,0 +1,310 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Геймерчик</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Геймерчик: советы по мобильным играм, оценка пиксель-арта и шуточный суд над судьёй. Приложение для Android.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Onest:wght@600;800&display=swap">
+<style>
+:root{--bg:#0e1116;--surface:#171c24;--surface-2:#1f2631;--fg:#e7ecf3;--muted:#98a3b3;--line:#273040;--pink:#ff5fa2;--violet:#7a3df0;--on-pink:#0b0e12;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Inter,system-ui,sans-serif;padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+.wrap{max-width:880px;margin:0 auto;padding:0}
+header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;font:800 20px Onest,Inter,sans-serif;text-decoration:none}
+.brand img{width:34px;height:34px;border-radius:9px}
+.nav a.btn{padding:8px 14px;font-size:14px}
+.hero{position:relative;overflow:hidden;border-radius:24px;margin-top:8px;padding:34px 22px 30px;text-align:center;
+ background:radial-gradient(circle at 80% 10%,rgba(255,95,162,.45),transparent 45%),radial-gradient(circle at 10% 90%,rgba(122,61,240,.5),transparent 50%),linear-gradient(135deg,#2a1230,#1a1030);border:1px solid rgba(255,255,255,.1)}
+.hero::before{content:"";position:absolute;inset:0;background:conic-gradient(rgba(255,255,255,.04) 25%,transparent 0 50%,rgba(255,255,255,.04) 0 75%,transparent 0) 0 0/28px 28px;pointer-events:none}
+.hero>*{position:relative}
+.hero img.logo{width:104px;height:104px;border-radius:26px;box-shadow:0 12px 40px rgba(255,95,162,.35)}
+h1{font:800 clamp(34px,8vw,54px)/1.05 Onest,Inter,sans-serif;margin:16px 0 8px}
+.lead{max-width:34em;margin:0 auto 20px;color:#d3d9e4;font-size:17px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:12px;padding:13px 20px;background:var(--pink);color:var(--on-pink);border:0;cursor:pointer;font-size:16px}
+.btn.ghost{background:rgba(255,255,255,.08);color:var(--fg);border:1px solid rgba(255,255,255,.2)}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+.small{color:var(--muted);font-size:13px;margin-top:10px}
+section{margin-top:44px}
+h2{font:800 26px/1.15 Onest,Inter,sans-serif;margin:0 0 14px}
+.cards{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:680px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+.card .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:20px;margin-bottom:10px;background:linear-gradient(135deg,var(--pink),var(--violet))}
+.card h3{margin:0 0 6px;font:800 18px Onest,Inter,sans-serif}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:7px 13px;font-size:14px}
+.steps{counter-reset:s;display:grid;gap:10px;padding:0;margin:0;list-style:none}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 14px 14px 56px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:var(--pink);color:var(--on-pink)}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:15px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px}
+summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.support{background:linear-gradient(135deg,rgba(255,95,162,.16),rgba(122,61,240,.16));border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:22px;text-align:center}
+.support p{margin:0 0 14px;color:#d3d9e4}
+footer{margin:44px 0 30px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}
+
+input.f,select.f{width:100%;font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
+.dev{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:10px}
+.dev label{display:grid;gap:4px;font-size:14px;color:var(--muted)}
+.vrow{display:flex;gap:10px;align-items:center;justify-content:space-between;background:var(--surface-2);border-radius:10px;padding:10px 12px;flex-wrap:wrap}
+.vrow .t{min-width:0;overflow-wrap:anywhere}
+.vrow .t small{display:block;color:var(--muted)}
+.mini{font:inherit;font-weight:600;font-size:14px;border-radius:9px;padding:7px 12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+.mini.armed{border-color:#ff7b6b;color:#ff7b6b}
+.msg{font-size:14px;color:var(--muted)}
+.vlist{display:grid;gap:6px;margin-top:12px;text-align:left}
+.vlist a{color:var(--fg)}
+:focus-visible{outline:2px solid var(--pink);outline-offset:2px}
+</style>
+<div class="wrap">
+<header>
+  <a class="brand" href="#top"><img src="data:image/png;base64,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" alt="">Геймерчик</a>
+  <nav class="nav"><a class="btn" href="#download" id="navDl">Скачать</a></nav>
+</header>
+
+<main id="top">
+<div class="hero">
+  <img class="logo" src="data:image/png;base64,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" alt="Иконка Геймерчика">
+  <h1>Геймерчик</h1>
+  <p class="lead">ИИ-помощник для мобильных игроков: советы по любимым играм, строгая оценка пиксель-арта и шуточный суд над судьёй.</p>
+  <div class="cta">
+    <a class="btn" id="apkBtn" href="#download">Скачать для Android</a>
+    <a class="btn ghost" href="#how">Как начать</a>
+  </div>
+  <p class="small">Бесплатно. Нужен свой ключ Gemini, он тоже бесплатный.</p>
+</div>
+
+<section id="features">
+  <h2>Что умеет</h2>
+  <div class="cards">
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div><h3>Чат по играм</h3><p>Девять игр, у каждой свой помощник. Спроси про высадку, билд, настройки или тактику и получи короткий ответ по делу.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg></div><h3>Судья пиксель-арта</h3><p>Нарисуй картинку в мини-редакторе и получи честную оценку: что получилось, что слабо и что делать дальше.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 7h14M5 7l-3 7a3.5 3.5 0 0 0 6 0L5 7zM19 7l-3 7a3.5 3.5 0 0 0 6 0l-3-7zM8 21h8"/></svg></div><h3>Суд над судьёй</h3><p>Не согласен с оценкой? Подай иск. Другой судья рассудит справедливо, а приговор будет с юмором.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Для каких игр</h2>
+  <div class="chips">
+    <span class="chip">PUBG Mobile</span><span class="chip">Terraria</span><span class="chip">Brawl Stars</span>
+    <span class="chip">OXIDE</span><span class="chip">Roblox</span><span class="chip">Melon Sandbox</span>
+    <span class="chip">掘地求升</span><span class="chip">Pixel Studio</span><span class="chip">Minecraft</span>
+  </div>
+</section>
+
+<section id="how">
+  <h2>Как начать</h2>
+  <ol class="steps">
+    <li><b>Скачай и установи</b><span>Скачай APK-файл. Android может спросить про установку из неизвестных источников, разреши её для файла.</span></li>
+    <li><b>Получи бесплатный ключ</b><span>Открой aistudio.google.com, войди в аккаунт Google, нажми «Get API key» и «Create API key», скопируй ключ.</span></li>
+    <li><b>Вставь ключ в приложение</b><span>В самом низу главного экрана нажми «Сохранить». Ключ остаётся только на твоём устройстве.</span></li>
+    <li><b>Играй и рисуй</b><span>Выбери игру, задай вопрос или нарисуй картинку в Pixel Studio и получи оценку.</span></li>
+  </ol>
+</section>
+
+<section id="download">
+  <h2>Скачать</h2>
+  <div class="card" style="text-align:center">
+    <p style="margin:0 0 14px;color:var(--muted)">Версия для Android (APK). Файл не подписан в Google Play, поэтому установка идёт вручную.</p>
+    <a class="btn" id="apkBtn2" href="#">Скачать APK</a>
+    <p class="small" id="apkNote"></p>
+    <div class="vlist" id="verList" hidden></div>
+  </div>
+</section>
+
+<section>
+  <h2>Вопросы</h2>
+  <details><summary>Это бесплатно?</summary><p>Приложение бесплатное. Ответы даёт Gemini от Google по твоему личному ключу, а лимиты и условия определяет Google.</p></details>
+  <details><summary>Что с моим ключом?</summary><p>Он хранится только на твоём устройстве и отправляется только в Google при запросе. Никому его не показывай и не публикуй.</p></details>
+  <details><summary>Куда уходит мой рисунок?</summary><p>Когда ты просишь оценку, картинка отправляется в Google для анализа. Не рисуй в редакторе ничего личного.</p></details>
+  <details><summary>ИИ может ошибаться?</summary><p>Да. Про свежие обновления игр и детали он может ошибаться, и в таких случаях должен об этом сказать. Проверяй важное в игре.</p></details>
+</section>
+
+<section>
+  <div class="support">
+    <h2>Нравится Геймерчик?</h2>
+    <p>Поддержи автора любой суммой от 1 до 100 грн. Это помогает делать обновления и новые приложения.</p>
+    <a class="btn" id="donateBtn" href="https://www.privat24.ua/send/ktnmq" target="_blank" rel="noopener noreferrer">Поддержать автора</a>
+  </div>
+</section>
+
+<section id="dev" hidden>
+  <h2>Режим разработчика</h2>
+  <div class="dev">
+    <p class="msg">Эту панель видят только владелец и редакторы страницы. Добавь новую версию APK: ссылку на файл (Google Drive, GitHub Releases или другой хостинг). Самая новая версия становится главной на кнопке «Скачать».</p>
+    <div id="keyNewBox" hidden style="display:grid;gap:8px">
+      <label>Придумай ключ подтверждения (от 6 символов)<input class="f" id="devKeyNew" type="password" autocomplete="new-password" maxlength="60"></label>
+      <button class="btn" id="keySave" type="button">Сохранить ключ</button>
+    </div>
+    <label id="keyBox" hidden>Ключ подтверждения<input class="f" id="devKey" type="password" autocomplete="off" maxlength="60"></label>
+    <label>Версия<input class="f" id="devVer" type="text" maxlength="40" placeholder="например: 1.1"></label>
+    <label>Ссылка на APK (https)<input class="f" id="devUrl" type="url" maxlength="500" placeholder="https://..."></label>
+    <label>Что нового (по желанию)<input class="f" id="devNote" type="text" maxlength="120" placeholder="например: добавили кнопку поддержки"></label>
+    <button class="btn" id="devAdd" type="button">Добавить версию</button>
+    <p class="msg" id="devMsg" aria-live="polite"></p>
+    <div id="devList" style="display:grid;gap:8px"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  Геймерчик — неофициальное приложение. Названия игр принадлежат их владельцам и используются только для обозначения тем помощника.
+</footer>
+</div>
+
+<script>
+/* Запасная ссылка на APK, пока в базе нет ни одной версии */
+var APK_URL = "";
+(function () {
+  var b1 = document.getElementById("apkBtn"), b2 = document.getElementById("apkBtn2"), note = document.getElementById("apkNote");
+  var verList = document.getElementById("verList"), devSec = document.getElementById("dev"), devList = document.getElementById("devList");
+  var devVer = document.getElementById("devVer"), devUrl = document.getElementById("devUrl"), devNote = document.getElementById("devNote");
+  var devAdd = document.getElementById("devAdd"), devMsg = document.getElementById("devMsg");
+  var versions = [], db = null, canEdit = false, keyDoc = null;
+  var keyNewBox = document.getElementById("keyNewBox"), keyBox = document.getElementById("keyBox");
+  var devKey = document.getElementById("devKey"), devKeyNew = document.getElementById("devKeyNew"), keySave = document.getElementById("keySave");
+  function sha(str) {
+    return crypto.subtle.digest("SHA-256", new TextEncoder().encode(str)).then(function (b) {
+      return Array.prototype.map.call(new Uint8Array(b), function (x) { return ("0" + x.toString(16)).slice(-2); }).join("");
+    });
+  }
+  function verify() {
+    if (!keyDoc) { devMsg.textContent = "Сначала задай ключ подтверждения."; return Promise.resolve(false); }
+    return sha(String(keyDoc.salt) + devKey.value).then(function (h) {
+      var ok = h === keyDoc.hash;
+      if (!ok) devMsg.textContent = "Неверный ключ подтверждения.";
+      return ok;
+    }).catch(function () { devMsg.textContent = "Не получилось проверить ключ."; return false; });
+  }
+
+  function safe(u) { return typeof u === "string" && /^https:\/\//i.test(u); }
+  function fmt(ts) { try { return new Date(ts).toLocaleDateString("ru-RU"); } catch (e) { return ""; } }
+  function mk(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; }
+
+  function render() {
+    var good = versions.filter(function (v) { return safe(v.url); });
+    var cur = good[0];
+    var url = cur ? cur.url : (safe(APK_URL) ? APK_URL : "");
+    [b1, b2].forEach(function (b) {
+      if (url) { b.href = url; b.target = "_blank"; b.rel = "noopener noreferrer"; b.removeAttribute("aria-disabled"); }
+      else { b.href = b === b1 ? "#download" : "#"; b.removeAttribute("target"); if (b === b2) b2.setAttribute("aria-disabled", "true"); }
+    });
+    if (cur) {
+      note.textContent = "Версия " + (cur.version || "?") + (cur.createdAt ? " · " + fmt(cur.createdAt) : "") + (cur.note ? " · " + cur.note : "");
+    } else {
+      note.textContent = url ? "" : "Ссылка на APK скоро появится.";
+    }
+    verList.textContent = "";
+    var older = good.slice(1, 6);
+    verList.hidden = !older.length;
+    if (older.length) {
+      verList.appendChild(mk("div", "small", "Предыдущие версии"));
+      older.forEach(function (v) {
+        var a = mk("a", "", "Версия " + (v.version || "?") + (v.createdAt ? " · " + fmt(v.createdAt) : ""));
+        a.href = v.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+        verList.appendChild(a);
+      });
+    }
+    renderDev();
+  }
+
+  function renderDev() {
+    devSec.hidden = !(canEdit && db);
+    keyNewBox.hidden = !(canEdit && db && !keyDoc);
+    keyNewBox.style.display = keyNewBox.hidden ? "none" : "grid";
+    keyBox.hidden = !keyDoc;
+    devList.textContent = "";
+    if (!versions.length) devList.appendChild(mk("p", "msg", "Версий пока нет. Добавь первую выше."));
+    versions.forEach(function (v) {
+      var row = mk("div", "vrow");
+      var t = mk("div", "t", "Версия " + (v.version || "?"));
+      t.appendChild(mk("small", "", (safe(v.url) ? v.url : "ссылка недействительна") + (v.createdAt ? " · " + fmt(v.createdAt) : "")));
+      var del = mk("button", "mini", "Удалить");
+      del.type = "button";
+      var armed = false, tm = null;
+      del.addEventListener("click", function () {
+        if (!armed) {
+          armed = true; del.classList.add("armed"); del.textContent = "Точно удалить?";
+          tm = setTimeout(function () { armed = false; del.classList.remove("armed"); del.textContent = "Удалить"; }, 3000);
+          return;
+        }
+        clearTimeout(tm);
+        del.disabled = true;
+        verify().then(function (ok) {
+          if (!ok) { del.disabled = false; armed = false; del.classList.remove("armed"); del.textContent = "Удалить"; return; }
+          return db.doc("apk/" + v.id).delete().catch(function () { devMsg.textContent = "Не получилось удалить. Попробуй ещё раз."; del.disabled = false; });
+        });
+      });
+      row.appendChild(t); row.appendChild(del);
+      devList.appendChild(row);
+    });
+  }
+
+  devAdd.addEventListener("click", function () {
+    if (!db) return;
+    var ver = devVer.value.trim(), url = devUrl.value.trim(), nt = devNote.value.trim();
+    if (!ver) { devMsg.textContent = "Укажи номер версии."; return; }
+    if (!safe(url)) { devMsg.textContent = "Ссылка должна начинаться с https://"; return; }
+    devAdd.disabled = true;
+    devMsg.textContent = "Проверяю ключ…";
+    verify().then(function (ok) {
+      if (!ok) return;
+      devMsg.textContent = "Сохраняю…";
+      return db.collection("apk").add({ version: ver.slice(0, 40), url: url.slice(0, 500), note: nt.slice(0, 120), createdAt: Date.now() }).then(function () {
+        devVer.value = ""; devUrl.value = ""; devNote.value = "";
+        devMsg.textContent = "Версия добавлена.";
+      }).catch(function () {
+        devMsg.textContent = "Не получилось сохранить: проверь права доступа к странице.";
+      });
+    }).then(function () { devAdd.disabled = false; });
+  });
+
+  keySave.addEventListener("click", function () {
+    if (!db) return;
+    var k = devKeyNew.value;
+    if (k.length < 6) { devMsg.textContent = "Ключ должен быть не короче 6 символов."; return; }
+    keySave.disabled = true;
+    var salt = Array.prototype.map.call(crypto.getRandomValues(new Uint8Array(12)), function (x) { return ("0" + x.toString(16)).slice(-2); }).join("");
+    sha(salt + k).then(function (h) {
+      return db.doc("settings/devkey").set({ salt: salt, hash: h });
+    }).then(function () {
+      devKeyNew.value = "";
+      devMsg.textContent = "Ключ сохранён. Запомни его: он нужен для каждого изменения.";
+    }).catch(function () {
+      devMsg.textContent = "Не получилось сохранить ключ.";
+    }).then(function () { keySave.disabled = false; });
+  });
+
+  render();
+
+  function cap(name) {
+    var c = window.claude;
+    if (!c || !c.use) return Promise.resolve(null);
+    return c.use(name).catch(function () { return null; });
+  }
+  Promise.all([cap("db"), cap("user")]).then(function (r) {
+    db = r[0];
+    var user = r[1];
+    if (db) {
+      db.collection("apk").orderBy("createdAt", "desc").limit(30).onSnapshot(function (snap) {
+        versions = snap.docs.map(function (d) { var x = d.data() || {}; x.id = d.id; return x; });
+        render();
+      }, function () {});
+      db.doc("settings/devkey").onSnapshot(function (snap) {
+        keyDoc = snap.exists ? snap.data() : null;
+        renderDev();
+      }, function () {});
+    }
+    if (user) {
+      user.canEdit().then(function (ok) { canEdit = !!ok; renderDev(); });
+    }
+  });
+})();
+</script>
+
+</body></html>
